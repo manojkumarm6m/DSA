@@ -2,7 +2,7 @@ package recursion.mediumRecursion;
 
 import java.util.*;
 
-public class CombinationSumOptimized {
+public class Expermient{
 
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         Arrays.sort(candidates); // Sorting helps pruning
@@ -18,19 +18,11 @@ public class CombinationSumOptimized {
             result.add(new ArrayList<>(current));
             return;
         }
-
-        for (int i = index; i  < candidates.length; i++) {
-            if (candidates[i] > target) break; // Pruning
-
-            current.add(candidates[i]);  // choose
-            backtrack(candidates, target - candidates[i], i, current, result); // reuse allowed
-            current.remove(current.size() - 1);  // backtrack
-        }
     }
 
-    // ---------------------- MAIN METHOD AT BOTTOM ----------------------
-    public static void main(String[] args) {
-        int[] candidates = {2, 3, 6, 7};
+
+    public static void main(String[] args){
+        int[] candidates = {0};
         int target = 7;
 
         List<List<Integer>> result = combinationSum(candidates, target);
