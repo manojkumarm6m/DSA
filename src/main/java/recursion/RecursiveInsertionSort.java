@@ -1,3 +1,5 @@
+package recursion;
+
 public class RecursiveInsertionSort {
 
     private static void insertionSort(int[] arr, int n){
@@ -10,7 +12,7 @@ public class RecursiveInsertionSort {
             arr[j+1] = arr[j];
             j--;
         }
-        arr[arr + 1] = last;
+        arr[arr.length - 1] = last;
     }
 
     public static void main(String[] args) {
